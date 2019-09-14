@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <!-- <a class="navbar-brand" href="#">Logo</a>
+ -->
+  <!-- Links -->
+  <ul class="navbar-nav">
+  	    <li class="nav-item dropdown" >
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/" translate>Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about" translate>About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact" translate>Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/dashboard" translate>Dashboard</a>
+    </li>
+    <li class="nav-item">
+    	<select #langSelect (change)="translate.use(langSelect.value)">
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>
+    </li>
+
+    <!-- Dropdown -->
+
+  </ul>
+</nav>
